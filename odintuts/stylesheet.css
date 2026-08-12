@@ -1,0 +1,132 @@
+:root {
+    --glass-bg: rgba(255, 255, 255, 0.08);
+    --glass-border: rgba(255, 255, 255, 0.349);
+    --nav-hover: rgb(216, 216, 216);
+    --glass-hover-bg: rgba(255, 255, 255, 0.178);
+    --primary-color: green;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-image: url(imgs/Gemini_Generated_Image_rq29i0rq29i0rq29.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Outfit, sans-serif;
+    color: white;
+}
+
+nav {
+    z-index: 1000;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-evenly;
+    gap: 30px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.nav a:hover {
+    color: var(--nav-hover);
+}
+
+.panel {
+    background-color: var(--glass-bg);
+    margin: 40px;
+    border-radius: 40px;
+    border: 2px solid var(--glass-border);
+    backdrop-filter: blur(14px);
+    min-height: 85vh;
+    position: relative;
+}
+
+#main-head {
+    font-size: 64px;
+}
+
+#landing-header {
+    max-width: 650px;
+    margin-left: 30px;
+}
+
+.upper-ps {
+    margin-top: -50px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.ctas {
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    gap: 30px;
+}
+
+.primary-cta {
+    padding: 15px 20px;
+    box-shadow: 0px 0px 30px rgba(0, 128, 0, 0.438);
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    backdrop-filter: blur(14px);
+    color: white;
+    text-decoration: none;
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.primary-cta:hover {
+    transform: scale(1.1);
+    background-color: rgb(33, 143, 33);
+    box-shadow: 0px 0px 50px rgba(33, 143, 33, 0.671);
+}
+
+.secondary-cta {
+    padding: 15px 20px;
+    border-radius: 10px;
+    background-color: var(--glass-bg);
+    backdrop-filter: blur(14px);
+    color: white;
+    text-decoration: none;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.623);
+    transition: transform 0.2s ease, background-color 0.2s ease, backdrop-filer 0.2s ease, box-shadow 0.2s ease;
+}
+
+.secondary-cta:hover {
+    transform: translateY(-5px);
+    background-color: var(--glass-hover-bg);
+    backdrop-filter: blur(20px);
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.637);
+}
+
+.panel::before {
+    content: "🟢 Available for projects";
+    position: absolute;
+    font-size: 20px;
+    bottom: 25px;
+    right: 25px;
+    padding: 5px 10px;
+    background-color: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(14px);
+    border-radius: 50px;
+}
